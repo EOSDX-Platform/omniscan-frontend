@@ -7,7 +7,13 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 export default defineConfig({
 	root: 'src',
 	plugins: [
-		vue(),
+		vue({
+			template: {
+				compilerOptions: {
+					isCustomElement: (tag) => tag.startsWith('sp-')
+				}
+			}
+		}),
 		vueDevTools()
 	],
 	resolve: {

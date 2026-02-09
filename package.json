@@ -53,6 +53,8 @@
     ]
   },
   "dependencies": {
+    "@spectrum-web-components/bundle": "^1.11.2",
+    "@spectrum-web-components/theme": "^1.11.2",
     "vue": "^3.5.27"
   }
 }
