@@ -6,6 +6,7 @@
 		"module": "ESNext",
 		"target": "ESNext",
 		"moduleResolution": "bundler",
+        "maxNodeModuleJsDepth": 0,
 		"baseUrl": ".",
 		"paths": {
 			"@/*": [

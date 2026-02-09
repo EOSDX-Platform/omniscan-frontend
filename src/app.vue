@@ -1,7 +1,5 @@
 <script setup>
 import { ref } from 'vue'
-import '@spectrum-web-components/bundle/elements.js'
-import '@/styles/globalCustom.css'
 
 const count = ref(0)
 
@@ -27,7 +25,7 @@ const updateCount = (e) => {
 </script>
 
 <template>
-  <sp-theme theme="spectrum" color="light" scale="medium" class="custom-theme">
+  <sp-theme :system.attr="'spectrum'" color="light" scale="medium" class="custom-theme">
     <div class="container">
       <h1>Vue 3</h1>
 
