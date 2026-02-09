@@ -1,0 +1,21 @@
+node_modules
+.idea
+.vscode
+
+# Build outputs
+.DS_Store
+dist
+dist-ssr
+coverage
+*.local
+
+# Environment
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# cypress
+/cypress/videos/
+/cypress/screenshots/

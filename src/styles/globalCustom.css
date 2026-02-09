@@ -1,0 +1,14 @@
+/* Custom Spectrum theme overrides */
+.custom-theme {
+	--spectrum-accent-background-color-default: #ff6600;
+	--spectrum-accent-background-color-hover: #ff7700;
+	--spectrum-accent-background-color-down: #ee5500;
+	--spectrum-accent-background-color-key-focus: #ff6600;
+
+	/* For borders and outlines */
+	--spectrum-accent-color-900: #ff6600;
+	--spectrum-accent-color-1000: #ff7700;
+
+	/* For text on accent backgrounds */
+	--spectrum-accent-content-color-default: white;
+}
