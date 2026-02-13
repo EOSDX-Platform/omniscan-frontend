@@ -1,0 +1,153 @@
+section {
+  background: linear-gradient(to bottom, #ffffff 90%, #e6f3ff 98%, #e9f5ff 100%) !important;
+  background-attachment: fixed;
+  footer::before {
+    content: '';
+    background-image: url('@/assets/eoslogoorange.webp');
+    z-index: 3;
+    height: 64px;
+    width: 136px;
+    background-size: cover;
+  }
+}
+
+/* login-screen */
+.login-screen {
+  .icon-login {
+    width: var(--space-blocks);
+    margin: var(--space-inside-m) auto;
+    background-color: var(--color-surface);
+    border-radius: 50%;
+    padding: var(--space-inside-s);
+  }
+  & > .column {
+    margin: auto;
+  }
+  h2 {
+    font-size: var(--font-size-heading);
+    margin-bottom: var(--font-size-large);
+    text-transform: capitalize;
+    text-align: center;
+  }
+  .forgot-password {
+    font-size: var(--font-size-small);
+    text-transform: capitalize;
+  }
+}
+
+.history-screen {
+  main {
+    height: calc(100vh - var(--space-page));
+    & > .column {
+      height: 100%;
+    }
+    &.offline:after {
+      position: absolute;
+      content: 'No connection to the server';
+      background-color: var(--color-warn);
+      padding: var(--space-inside-s) var(--space-inside-m);
+
+      bottom: var(--space-page);
+      left: 50%;
+      transform: translate(-50%, 0%);
+      font-size: var(--font-size-small);
+    }
+  }
+  input {
+    font-size: var(--font-size-small);
+    padding: var(--space-inside-s);
+  }
+  button {
+    font-size: var(--font-size-small);
+    padding: var(--space-inside-s) var(--space-inside-l);
+  }
+
+  .search {
+    display: flex;
+    align-items: center;
+    position: relative;
+    input {
+      width: 260px;
+      padding-right: 2.5em;
+    }
+  }
+  .search:after {
+    content: '';
+    position: absolute;
+    background: url('@/assets/search.svg');
+    background-size: cover;
+    height: 70%;
+    aspect-ratio: 1 / 1;
+    right: var(--space-inside-s);
+    opacity: 0.2;
+  }
+  .filters {
+    display: flex;
+    gap: 26px;
+  }
+  .users-table {
+    position: relative;
+    margin-top: var(--space-unrelated);
+    display: grid;
+    grid-template-columns: auto auto 1fr 1fr auto auto;
+    gap: 0;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-surface);
+    font-family: Arial, sans-serif;
+    counter-reset: row-number;
+    border-radius: var(--space-inside-s);
+    overflow: auto;
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: var(--color-border);
+      border-radius: 0;
+    }
+  }
+
+  .table-header,
+  .table-row {
+    display: contents;
+  }
+
+  .table-header > div {
+    background-color: var(--color-text-primary);
+    color: white;
+    padding: var(--space-inside-s) var(--space-inside-l) var(--space-inside-s) var(--space-inside-m);
+    position: sticky;
+    top: 0;
+  }
+
+  .table-row > div {
+    height: min-content;
+    background-color: white;
+    padding: var(--space-inside-s) var(--space-inside-l) var(--space-inside-s) var(--space-inside-m);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .table-row:nth-child(even) > div {
+    background-color: var(--color-surface);
+  }
+
+  .table-row > div:first-child::before {
+    counter-increment: row-number;
+    content: counter(row-number);
+    font-weight: bold;
+    font-size: var(--font-size-small);
+  }
+
+  .table-row:hover > div {
+    background-color: var(--color-success-alpha);
+    color: white;
+  }
+  .table-row.active > div {
+    background-color: var(--color-success);
+    color: white;
+  }
+}

@@ -55,6 +55,8 @@
   "dependencies": {
     "@spectrum-web-components/bundle": "^1.11.2",
     "@spectrum-web-components/theme": "^1.11.2",
-    "vue": "^3.5.27"
+    "lucide-vue-next": "^0.563.0",
+    "vue": "^3.5.27",
+    "vue-router": "^4.6.4"
   }
 }
