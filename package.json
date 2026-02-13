@@ -33,7 +33,6 @@
     "eslint-plugin-check-file": "^3.3.1",
     "eslint-plugin-jsdoc": "^62.0.0",
     "eslint-plugin-no-unsanitized": "^4.1.4",
-    "eslint-plugin-promise": "^7.2.1",
     "eslint-plugin-security": "^3.0.1",
     "eslint-plugin-sonarjs": "^3.0.5",
     "eslint-plugin-vue": "^10.7.0",
@@ -47,14 +46,15 @@
   },
   "type": "module",
   "lint-staged": {
-    "src/**/*": "eslint --no-fix --quiet",
     "src/**/*.{js,vue}": [
+      "eslint --rule 'check-file/filename-naming-convention: error' --rule 'check-file/folder-naming-convention: error' --no-fix --quiet",
       "bash -c 'npm run type-check'"
     ]
   },
   "dependencies": {
     "@spectrum-web-components/bundle": "^1.11.2",
     "@spectrum-web-components/theme": "^1.11.2",
+    "lucide-vue-next": "^0.563.0",
     "vue": "^3.5.27"
   }
 }
