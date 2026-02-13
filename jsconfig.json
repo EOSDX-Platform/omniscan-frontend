@@ -1,5 +1,6 @@
 {
 	"compilerOptions": {
+        "types": ["vite/client"],
         "allowJs": true,
         "checkJs": true,
         "noEmit": true,
@@ -30,6 +31,7 @@
     ],
 	"exclude": [
 		"node_modules",
+        "src/assets",
 		"dist",
 		"dist-ssr",
 		"coverage",
