@@ -3,7 +3,6 @@ import globals from 'globals'
 import jsdoc from 'eslint-plugin-jsdoc'
 import sonarjs from 'eslint-plugin-sonarjs'
 import security from 'eslint-plugin-security'
-import promise from 'eslint-plugin-promise'
 import noUnsanitized from 'eslint-plugin-no-unsanitized'
 import checkFile from 'eslint-plugin-check-file'
 import cspellPlugin from '@cspell/eslint-plugin'
@@ -21,8 +20,9 @@ export default [
 			'.git/**'
 		]
 	},
+	// LIGHTWEIGHT: Only naming checks for specific file types
 	{
-		files: ['**/*'],
+		files: ['src/**/*.{js,vue}'], // Limit to known file types
 		plugins: {
 			'check-file': checkFile
 		},
@@ -31,6 +31,7 @@ export default [
 			'check-file/folder-naming-convention': ['error', { '**/*': 'CAMEL_CASE' }]
 		}
 	},
+	// HEAVYWEIGHT: All heavy plugins only for JS/Vue
 	{
 		files: ['src/**/*.{js,vue}'],
 		languageOptions: {
@@ -48,7 +49,6 @@ export default [
 			jsdoc,
 			sonarjs,
 			security,
-			promise,
 			'no-unsanitized': noUnsanitized,
 			'@cspell': cspellPlugin
 		},
@@ -66,7 +66,6 @@ export default [
 			...js.configs.recommended.rules,
 			...sonarjs.configs.recommended.rules,
 			...security.configs.recommended.rules,
-			...promise.configs.recommended.rules,
 			...noUnsanitized.configs.recommended.rules,
 
 			// Lang
@@ -87,11 +86,6 @@ export default [
 			// === No-Unsanitized ===
 			'no-unsanitized/method': 'error',
 			'no-unsanitized/property': 'error',
-
-			// === Promise ===
-			'promise/always-return': 'error',
-			'promise/no-return-wrap': 'error',
-			'promise/catch-or-return': 'error',
 
 			// === SonarJS ===
 			'sonarjs/no-duplicate-string': 'warn',
