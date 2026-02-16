@@ -7,6 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
+    "deploy": "gh-pages -d dist",
     "cy:open": "npx cypress open",
     "cy:run": "npx cypress run",
     "lint": "eslint .",
@@ -36,6 +37,7 @@
     "eslint-plugin-security": "^3.0.1",
     "eslint-plugin-sonarjs": "^3.0.5",
     "eslint-plugin-vue": "^10.7.0",
+    "gh-pages": "^6.3.0",
     "globals": "^17.0.0",
     "husky": "^9.1.7",
     "lint-staged": "^16.2.7",
@@ -55,6 +57,7 @@
     "@spectrum-web-components/bundle": "^1.11.2",
     "@spectrum-web-components/theme": "^1.11.2",
     "lucide-vue-next": "^0.563.0",
-    "vue": "^3.5.27"
+    "vue": "^3.5.27",
+    "vue-router": "^4.6.4"
   }
 }

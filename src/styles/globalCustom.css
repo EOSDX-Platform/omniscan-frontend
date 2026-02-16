@@ -5,10 +5,30 @@
 	--spectrum-accent-background-color-down: #ee5500;
 	--spectrum-accent-background-color-key-focus: #ff6600;
 
+
+
+
+	--spectrum-gray-500: color-mix(in srgb, var(--color-text-primary), white 20%);
+	--spectrum-gray-600: color-mix(in srgb, var(--color-text-primary), white 20%);
+
+	--spectrum-gray-800: var(--color-text-primary);
+
+	--spectrum-gray-900: color-mix(in srgb, var(--color-text-primary), black 20%);
+
+
 	/* For borders and outlines */
 	--spectrum-accent-color-900: #ff6600;
 	--spectrum-accent-color-1000: #ff7700;
 
 	/* For text on accent backgrounds */
 	--spectrum-accent-content-color-default: white;
+}
+
+sp-textfield {
+	--spectrum-textfield-width: 100%;
+	--spectrum-textfield-icon-size-invalid: 0;
+}
+
+sp-action-button:hover {
+	background-color: transparent;
 }
